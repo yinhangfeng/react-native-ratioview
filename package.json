@@ -1,0 +1,23 @@
+{
+  "name": "react-native-ratioview",
+  "version": "1.0.0",
+  "description": "A view can set the aspect ratio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinhangfeng/react-native-ratioview.git"
+  },
+  "keywords": [
+    "ratioview",
+    "react-native"
+  ],
+  "author": "yinhangfeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yinhangfeng/react-native-ratioview/issues"
+  },
+  "homepage": "https://github.com/yinhangfeng/react-native-ratioview#readme"
+}
