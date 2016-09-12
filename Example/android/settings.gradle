@@ -1,5 +1,5 @@
 rootProject.name = 'Example'
 
 include ':app'
-include ':react-native-ratio-view'
-project(':react-native-ratio-view').projectDir = new File(rootProject.projectDir, '../../android')
+include ':react-native-ratioview'
+project(':react-native-ratioview').projectDir = new File(rootProject.projectDir, '../../android')

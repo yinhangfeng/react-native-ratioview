@@ -10,4 +10,6 @@
 
 @interface RCTShadowRatioView : RCTShadowView
 
+@property (nonatomic, assign) CGFloat whRatio;
+
 @end

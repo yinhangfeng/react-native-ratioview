@@ -18,18 +18,26 @@ export default class RatioView extends Component {
   };
 
   render() {
+    let ratioView;
     let children = this.props.children;
+    if (this.props.whRatio > 0) {
+      ratioView = (
+        <RCTRatioView
+          whRatio={this.props.whRatio}/>
+      );
+      children = children && React.cloneElement(
+        React.Children.only(children),
+        {
+          style: [children.props.style, StyleSheet.absoluteFill],
+        }
+      );
+    }
+
     return (
       <View
         {...this.props}>
-        <RCTRatioView
-          whRatio={this.props.whRatio}/>
-        {children && React.cloneElement(
-          React.Children.only(children),
-          {
-            style: [children.props.style, StyleSheet.absoluteFill],
-          }
-        )}
+        {ratioView}
+        {children}
       </View>
     );
   }

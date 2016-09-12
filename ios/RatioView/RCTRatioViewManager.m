@@ -7,12 +7,18 @@
 //
 
 #import "RCTRatioViewManager.h"
+#import "RCTBridge.h"
+#import "RCTShadowRatioView.h"
 
 @implementation RCTRatioViewManager
 
-- (RCTShadowView *)shadowView
+RCT_EXPORT_MODULE()
+
+- (RCTShadowRatioView *)shadowView
 {
-    return [RCTShadowView new];
+    return [RCTShadowRatioView new];
 }
+
+RCT_EXPORT_SHADOW_PROPERTY(whRatio, CGFloat)
 
 @end

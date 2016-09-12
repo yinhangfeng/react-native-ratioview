@@ -20,15 +20,15 @@ public class ReactRatioViewShadowNode extends LayoutShadowNode implements CSSNod
     @Override
     public void measure(CSSNodeAPI node, float width, CSSMeasureMode widthMode, float height, CSSMeasureMode heightMode, MeasureOutput measureOutput) {
         if (widthMode == CSSMeasureMode.UNDEFINED || width < 0 || heightMode == CSSMeasureMode.EXACTLY) {
-            measureOutput.width = width < 0 ? 0 : width;
+            measureOutput.width = width > 0 ? width : 0;
             measureOutput.height = heightMode == CSSMeasureMode.EXACTLY ? height : 0;
-            Log.w(TAG, "measure: can not measure whRatio with width:" + width + " height:" + height + " widthMode:" + widthMode + " heightMode:" + heightMode);
+            //Log.w(TAG, "measure: can not measure whRatio with width:" + width + " height:" + height + " widthMode:" + widthMode + " heightMode:" + heightMode);
             return;
         }
         float h = width / whRatio;
         if (heightMode == CSSMeasureMode.AT_MOST && h > height) {
             h = height;
-            Log.w(TAG, "measure: not enough height space width:" + width + " height:" + height + " widthMode:" + widthMode + " heightMode:" + heightMode);
+            //Log.w(TAG, "measure: not enough height space width:" + width + " height:" + height + " widthMode:" + widthMode + " heightMode:" + heightMode);
         }
         measureOutput.width = width;
         measureOutput.height = h;
@@ -39,7 +39,7 @@ public class ReactRatioViewShadowNode extends LayoutShadowNode implements CSSNod
         if (this.whRatio != whRatio) {
             this.whRatio = whRatio;
             dirty();
-            setMeasureFunction(CSSConstants.isUndefined(whRatio) || whRatio <= 0 ? null : this);
+            setMeasureFunction(whRatio > 0 ? this : null);
         }
     }
 
