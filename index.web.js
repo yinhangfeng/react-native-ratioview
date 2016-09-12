@@ -7,7 +7,6 @@ import React, {
 import ReactNative, {
   View,
   StyleSheet,
-  requireNativeComponent,
 } from 'react-native';
 
 export default class RatioView extends Component {
@@ -18,21 +17,26 @@ export default class RatioView extends Component {
   };
 
   render() {
+    let ratioView;
     let children = this.props.children;
+    if (this.props.whRatio > 0) {
+      ratioView = (
+        <div style={{paddingTop: `${(1 / this.props.whRatio) * 100}%`,}}></div>
+      );
+      children = children && React.cloneElement(
+        React.Children.only(children),
+        {
+          style: [children.props.style, StyleSheet.absoluteFill],
+        }
+      );
+    }
+
     return (
       <View
         {...this.props}>
-        <RCTRatioView
-          whRatio={this.props.whRatio}/>
-        {children && React.cloneElement(
-          React.Children.only(children),
-          {
-            style: [children.props.style, StyleSheet.absoluteFill],
-          }
-        )}
+        {ratioView}
+        {children}
       </View>
     );
   }
 }
-
-const RCTRatioView = requireNativeComponent('RCTRatioView', RatioView);
