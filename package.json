@@ -12,12 +12,16 @@
   },
   "keywords": [
     "ratioview",
-    "react-native"
+    "react-native",
+    "ratio-view"
   ],
   "author": "yinhangfeng",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yinhangfeng/react-native-ratioview/issues"
   },
-  "homepage": "https://github.com/yinhangfeng/react-native-ratioview#readme"
+  "homepage": "https://github.com/yinhangfeng/react-native-ratioview#readme",
+  "peerDependencies": {
+    "react-native": ">=0.32.0"
+  },
 }
