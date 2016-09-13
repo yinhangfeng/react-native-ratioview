@@ -23,5 +23,5 @@
   "homepage": "https://github.com/yinhangfeng/react-native-ratioview#readme",
   "peerDependencies": {
     "react-native": ">=0.32.0"
-  },
+  }
 }
