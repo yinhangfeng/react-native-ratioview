@@ -1,4 +1,5 @@
 # react-native-ratioview [![npm version](https://badge.fury.io/js/react-native-ratioview.svg)](https://badge.fury.io/js/react-native-ratioview)
+High performance aspect ratio layout container
 
 ![](https://github.com/yinhangfeng/react-native-ratioview/blob/master/images/image.png?raw=true)
 
