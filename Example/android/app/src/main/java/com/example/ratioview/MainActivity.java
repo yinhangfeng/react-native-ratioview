@@ -1,4 +1,4 @@
-package com.example;
+package com.example.ratioview;
 
 import com.facebook.react.ReactActivity;
 

@@ -1,4 +1,4 @@
-package com.example;
+package com.example.ratioview;
 
 import android.app.Application;
 import android.util.Log;

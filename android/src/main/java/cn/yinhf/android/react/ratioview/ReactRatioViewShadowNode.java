@@ -38,8 +38,8 @@ public class ReactRatioViewShadowNode extends LayoutShadowNode implements CSSNod
     public void setWhRatio(float whRatio) {
         if (this.whRatio != whRatio) {
             this.whRatio = whRatio;
-            dirty();
             setMeasureFunction(whRatio > 0 ? this : null);
+            dirty();
         }
     }
 
@@ -47,5 +47,6 @@ public class ReactRatioViewShadowNode extends LayoutShadowNode implements CSSNod
     public void reset() {
         super.reset();
         whRatio = CSSConstants.UNDEFINED;
+        setMeasureFunction(null);
     }
 }
