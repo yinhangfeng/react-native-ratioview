@@ -1,7 +1,5 @@
 package cn.yinhf.android.react.ratioview;
 
-import android.util.Log;
-
 import com.facebook.csslayout.CSSConstants;
 import com.facebook.csslayout.CSSMeasureMode;
 import com.facebook.csslayout.CSSNodeAPI;

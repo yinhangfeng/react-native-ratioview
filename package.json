@@ -1,6 +1,6 @@
 {
   "name": "react-native-ratioview",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A view can set the aspect ratio",
   "main": "index.js",
   "scripts": {

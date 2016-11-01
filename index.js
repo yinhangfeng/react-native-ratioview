@@ -46,5 +46,6 @@ export default class RatioView extends Component {
 const RCTRatioView = requireNativeComponent('RCTRatioView', RatioView, {
   nativeOnly: {
     nativeBackgroundAndroid: true,
+    nativeForegroundAndroid: true,
   }
 });
