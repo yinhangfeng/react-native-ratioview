@@ -1,3 +1,5 @@
+# DEPRECATED
+https://github.com/facebook/react-native/commit/e1df3c878203fbed6cdf541849ab3ad490b8c93f
 # react-native-ratioview [![npm version](https://badge.fury.io/js/react-native-ratioview.svg)](https://badge.fury.io/js/react-native-ratioview)
 High performance aspect ratio layout container
 
